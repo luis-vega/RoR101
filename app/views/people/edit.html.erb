@@ -1,0 +1,10 @@
+<h1>Editing Person</h1>
+
+<p>
+	<!--<strong>Image:</strong>-->
+	<%= image_tag(@person.image,width:230,height:230) %></p>
+<p>
+<%= render 'form' %>
+
+<%= link_to 'Show', @person %> |
+<%= link_to 'Back', people_path %>

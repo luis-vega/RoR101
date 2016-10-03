@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+	<!--<strong>Image:</strong>-->
+	<%= image_tag(@person.image,width:230,height:230) %></p>
+<p>
+  <strong>Name:</strong>
+  <%= @person.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @person.age %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @person.email %>
+</p>
+
+<p>
+  <strong>Born date:</strong>
+  <%= @person.born_date %>
+</p>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>
