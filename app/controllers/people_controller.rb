@@ -8,7 +8,11 @@ class PeopleController < ApplicationController
       #  fulltext params[:search]
       #end
       #@people = @search.results
-    @people = Person.all
+    if params[:search].present?
+      @people = Person.search params[:search]
+    else
+      @people = Person.all
+    end
   end
 
   # GET /people/1
