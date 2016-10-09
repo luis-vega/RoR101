@@ -47,5 +47,3 @@ end
 
 gem 'faker'
 gem 'carrierwave'
-#gem 'sunspot_rails'
-#gem 'sunspot_solr'
