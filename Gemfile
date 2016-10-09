@@ -47,3 +47,5 @@ end
 
 gem 'faker'
 gem 'carrierwave'
+gem 'rails4-autocomplete'
+gem 'jquery-ui-rails'

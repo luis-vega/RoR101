@@ -3,6 +3,8 @@ class PeopleController < ApplicationController
 
   # GET /people
   # GET /people.json
+  autocomplete :person, :name, :extra_data => [:email]
+
   def index
       #@search = Person.search do 
       #  fulltext params[:search]
