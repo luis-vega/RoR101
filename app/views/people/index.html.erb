@@ -4,9 +4,11 @@
 
 <%= form_tag people_path, :method => :get do %>
   <p>
-    <%= autocomplete_field_tag :search, params[:search], autocomplete_person_name_people_path ,placeholder: "Search" %>
+    <%= text_field_tag :search, nil ,placeholder: "Search" %>
   </p>
+  <div class="results" id="person-search-results"></div>
 <% end %>
+
 <div id="cancel"><input type="text" name="cancel" placeholder="Cancel"></div>
 
 <table>
@@ -43,3 +45,8 @@
 <footer>
   <%= link_to '+', new_person_path %>
 </footer>
+<script>
+  $(function() {
+    new app.People;
+  });
+</script>
