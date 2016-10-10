@@ -10,7 +10,7 @@ app.People.prototype = {
   	this._input
     	.autocomplete({
       	source: '/people',
-      	appendTo: '#person-search-results',
+      	appendTo: '#people-search-results',
       	select: $.proxy(this._select, this)
     	})
     	.autocomplete('instance')._renderItem = $.proxy(this._render, this);
@@ -26,9 +26,10 @@ app.People.prototype = {
     		'<span class="img">',
     	  		'<img src="' + item.image_url + '" />',
     		'</span>',
-    		'<span class="title">' + item.name + '</span>',
-    		'<span class="author">' + item.age   + '</span>',
-    		'<span class="price">' + item.email + '</span>'
+    		'<span class="name">' + item.name + '</span>',
+    		'<span class="age">' + item.age   + '</span>',
+    		'<span class="email">' + item.email + '</span>',
+        '<span class="city">' + item.city + '</span>'
   		];
   		return $('<li>')
     		.append(markup.join(''))

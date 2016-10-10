@@ -118,3 +118,82 @@ footer{
     width: 40px;
   }
 }
+
+
+
+
+.people-search .results .ui-widget-content {
+  background: #fff;
+  font-size: .9em;
+  padding: .5em 0;
+  border-color: #ddd;
+  box-shadow: 0 .1em .2em rgba(187, 187, 187, 0.64);
+  line-height: 0.6;
+  max-height: 22.4em;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.people-search .results .ui-menu-item {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  padding: .4em .6em .4em 6.2em;
+  position: relative;
+  border: 0;
+  border-left: 5px solid transparent;
+  position: relative;
+  height: 4.8em;
+}
+
+.people-search .results .ui-state-focus {
+  background: #fff;
+  border-left-color: #08c;
+  font-weight: 300;
+}
+
+.people-search .results .ui-menu-item .img {
+  position: absolute;
+  width: 5em;
+  height: 5em;
+  left: .6em;
+  overflow: hidden;
+}
+
+.people-search .results .ui-menu-item .img img {
+  max-width: 100%;
+}
+
+.people-search .results .ui-menu-item .name {
+  display: block;
+  padding-top: 1.4em;
+  color: #555;
+}
+
+.people-search .results .ui-menu-item .email {
+  display: block;
+  font-size: .8em;
+  color: #aaa;
+  margin-top: .6em;
+  letter-spacing: 1px;
+}
+
+.people-search .results .ui-menu-item .city {
+  display: block;
+  font-size: .8em;
+  color: #aaa;
+  margin-top: .6em;
+  letter-spacing: 1px;
+}
+
+.people-search .results .ui-menu-item .age {
+  display: block;
+  font-size: .8em;
+  color: #aaa;
+  margin-top: .5em;
+}
+
+.people-search .results .ui-state-focus .age,
+.people-search .results .ui-state-focus .email,
+.people-search .results .ui-state-focus .city,
+.people-search .results .ui-state-focus .name, {
+  color: #08c;
+}
