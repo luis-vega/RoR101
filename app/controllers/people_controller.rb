@@ -3,15 +3,17 @@ class PeopleController < ApplicationController
 
   # GET /people
   # GET /people.json
+  #autocomplete :person, :name, :full =>true ,:extra_data => [:email]
+
   def index
-      #@search = Person.search do 
-      #  fulltext params[:search]
-      #end
-      #@people = @search.results
     if params[:search].present?
       @people = Person.search params[:search]
     else
       @people = Person.all
+    end
+    respond_to do |format|
+      format.html
+      format.json { @people = Person.search(params[:term]) }
     end
   end
 

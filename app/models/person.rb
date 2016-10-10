@@ -5,7 +5,7 @@ class Person < ActiveRecord::Base
 	#	text :name, :age, :email, :born_date,:city 
 	#end
 
-	def self.search(q)
-		self.where('name LIKE :q OR age LIKE :q OR email LIKE :q OR born_date LIKE :q OR city LIKE :q' , q: "%#{q}%")
+	def self.search(term)
+		self.where('name LIKE :term OR age LIKE :term OR email LIKE :term OR born_date LIKE :term OR city LIKE :term' , term: "%#{term}%")
 	end
 end
