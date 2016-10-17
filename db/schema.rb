@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160907010253) do
+ActiveRecord::Schema.define(version: 20161012110850) do
 
   create_table "people", force: :cascade do |t|
     t.string   "name"
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 20160907010253) do
     t.datetime "updated_at", null: false
     t.string   "city"
     t.string   "image"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "username"
+    t.string   "email"
+    t.string   "crypted_password"
+    t.string   "password_salt"
+    t.string   "persistence_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

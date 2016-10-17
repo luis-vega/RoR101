@@ -13,7 +13,16 @@
 
 <div id="cancel"><input type="text" name="cancel" placeholder="Cancel"></div>
 
-<table>
+
+<div id="user_nav">
+  <% if current_user %>
+    <%= link_to "Edit Profile", edit_user_path(:current) %> |
+    <%= link_to "Logout", logout_path %>
+  <% end %>
+</div>
+
+
+<table class="wrapper">
   <thead>
     <tr>
       <th>Image</th>
